@@ -32,7 +32,7 @@ const Footer = () => {
           </i>
           <i className="text-[#808080]">
             <Link
-              to={"https://github.com/SIDDHESHUMESHSARANG/just-notes"}
+              to={"https://github.com/chmcs-siddheshumeshsarang/just-notes"}
               target="_blank"
             >
               <Github size={30} />
