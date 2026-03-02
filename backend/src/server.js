@@ -13,7 +13,7 @@ app.set("trust proxy", true);
 const port = process.env.PORT || 3001
 
 const CORSConfig = {
-    origin: 'http://localhost:5173', 
+    origin: 'https://justnotesweb.onrender.com', // for people who have cloned or forked this repo. change this with https://localhost:5173
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }
 
