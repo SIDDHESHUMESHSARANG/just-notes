@@ -46,7 +46,7 @@ const NotesCard = ({ _id, title, thumbnail, subject, semester, description, file
       <div className="card-body p-4 gap-2 flex flex-col flex-1">
         {/* FIXED HEIGHT CONTAINER TO ALIGN CONTENT BELOW */}
         <div className="h-[140px] flex flex-col">
-          <h3 className="text-xl font-bold truncate">{title}</h3>
+          <h3 className="text-xl font-bold">{title}</h3>
           <div className="flex flex-row gap-2 flex-wrap mt-1">
             <span className="badge badge-ghost border border-base-300 p-3 text-xs">Subject: {subject}</span>
             <span className="badge badge-ghost border border-base-300 p-3 text-xs">Semester: {semester}</span>
