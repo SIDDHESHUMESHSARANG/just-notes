@@ -12,7 +12,12 @@ const app = express()
 app.set("trust proxy", true);
 const port = process.env.PORT || 3001
 
-app.use(CORS())
+const CORSConfig = {
+    origin: 'https://justnotesweb.onrender.com', 
+    methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+
+app.use(CORS(CORSConfig))
 
 app.use(express.json())
 
