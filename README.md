@@ -159,6 +159,51 @@ The frontend uses Vite; navigate to `http://localhost:5173` by default.
 - Issue reports trigger EmailJS; configure service/template IDs accordingly.
 - All user-generated content is stored in MongoDB; handle credentials securely.
 
+## Project Architecture & Workflow
+**Just Notes** utilizes a decoupled MERN architecture designed for scalability, ensuring a clear separation of concerns between the client and the server.
+
+
+
+### Data Flow
+The application manages asynchronous communication via **Axios**, ensuring a responsive user experience. The backend utilizes **Express/Node.js** with **Multer** for multipart file handling, offloading storage to **Cloudinary** and metadata to **MongoDB**.
+
+
+### Application Routing
+The frontend is managed as a Single Page Application (SPA) using **React Router**, ensuring seamless navigation across the following routes:
+
+| Page | Route | Functionality |
+| :--- | :--- | :--- |
+| **Landing** | `/` | App introduction & theme-aware hero section |
+| **Home** | `/home` | Dynamic grid view of published notes |
+| **Create** | `/create` | Note creation & PDF upload form |
+| **Details** | `/notes/:id` | View note details & trigger secure download |
+| **Update** | `/update/:id` | Edit note metadata |
+| **Search** | `/search-results` | Query-based filtered results |
+| **Subjects** | `/subject-wise` | Hierarchical grouping by academic subject |
+| **Analytics** | `/count-per-semester` | Semester-based data visualization |
+| **Drafts** | `/unpublished` | Management portal for draft content |
+
+---
+
+### Backend API Documentation
+The application communicates with the MongoDB database through a RESTful API. Below is the reference for the primary endpoints:
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `POST` | `/api/v1/notes/create` | Create new note with thumbnail & PDF |
+| `GET` | `/api/v1/notes` | Fetch all published notes (sorted by newest) |
+| `GET` | `/api/v1/notes/:id` | Fetch single note by ID |
+| `GET` | `/api/v1/notes/search` | Search notes by title (case-insensitive regex) |
+| `GET` | `/api/v1/notes/groupsubjects` | Group all published notes by subject |
+| `GET` | `/api/v1/notes/notespersubject` | Get count of notes per subject |
+| `GET` | `/api/v1/notes/subjectpersemester` | Get count of subjects per semester |
+| `GET` | `/api/v1/notes/search/time` | Filter notes by date range |
+| `GET` | `/api/v1/notes/download/:id` | Generate Cloudinary PDF download URL |
+| `GET` | `/api/v1/notes/unp-notes` | Retrieve all unpublished/draft notes |
+| `PUT` | `/api/v1/notes/update/:id` | Update existing note metadata and files |
+| `DELETE` | `/api/v1/notes/delete/:id` | Delete note by ID |
+
+
 ## Testing & Debugging
 
 - Use Postman or curl to exercise backend endpoints.
