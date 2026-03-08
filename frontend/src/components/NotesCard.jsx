@@ -91,7 +91,7 @@ const NotesCard = ({ _id, title, thumbnail, subject, semester, description, file
       <ConfirmModal
         isOpen={confirmOpen}
         confirmAction={'Delete'}
-        title="Delete note"
+        title="Delete notes"
         message={`Are you sure you want to delete "${title}"? This action cannot be undone.`}
         onCancel={() => setConfirmOpen(false)}
         onConfirm={confirmDelete}

@@ -6,6 +6,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      
       backgroundImage: {
         grid: "linear-gradient(to right, oklch(var(--bc) / 0.1) 1px, transparent 1px), linear-gradient(to bottom, oklch(var(--bc) / 0.1) 1px, transparent 1px)",
       },

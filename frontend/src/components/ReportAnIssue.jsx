@@ -57,12 +57,13 @@ const ReportAnIssue = () => {
                 title="Report an Issue"
                 message="Help us improve by reporting any issues you encounter."
                 input1={true}
-                input1Text="Email"
+                input1Text="Your Email"
                 input1Value={email}
                 onInput1Change={setEmail}
                 input2={true}
                 input2Text="Describe the issue"
                 input2Value={issue}
+                badge={'To: web.just.notes@gmail.com'}
                 onInput2Change={setIssue}
                 onConfirm={handleSubmitReport}
                 confirmAction={loading ? 'Submitting...' : 'Submit'}

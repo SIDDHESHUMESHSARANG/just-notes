@@ -10,7 +10,7 @@ const LandingPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % wordsArr.length);
-    }, 2000);
+    }, 1000);
     return () => clearInterval(interval);
   }, [wordsArr.length]);
 
@@ -31,11 +31,11 @@ const LandingPage = () => {
         
         <div className="flex flex-col gap-2 mt-6">
           <p className="text-gray-500 text-lg md:text-xl font-medium">
-            The <span className="text-red-600">most direct</span> platform for your notes.
+            The <span className="bg-gradient-to-br from-red-500 via-red-600 to-red-900 bg-clip-text text-transparent">most direct</span> platform for your notes.
           </p>
 
           <p className="text-gray-500 mb-10 text-lg md:text-xl font-medium">
-            Made by <span className="text-red-600">Siddhesh Umesh Sarang</span>
+            Made by <span className="bg-gradient-to-br from-red-500 via-red-600 to-red-900 bg-clip-text text-transparent">Siddhesh Umesh Sarang</span>
           </p>
         </div>
 
@@ -44,7 +44,7 @@ const LandingPage = () => {
             Get Started <CornerDownRight />
           </Link>
 
-          <Link to={"https://siddheshumeshsarang.web.app"} className="btn btn-outline btn-sm md:btn-lg px-8 md:px-10 rounded-full shadow-xl">
+          <Link to={"https://siddheshumeshsarang.web.app"} className="btn btn-outline btn-md md:btn-lg px-8 md:px-10 rounded-full shadow-xl">
             Contact Developer<CornerDownRight />
           </Link>
         </div>

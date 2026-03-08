@@ -1,4 +1,5 @@
 import React from 'react';
+import {X} from 'lucide-react'
 
 const ConfirmModal = ({
     isOpen,
@@ -11,15 +12,20 @@ const ConfirmModal = ({
     input1Value = '',
     input2Value = '',
     onInput1Change,
-    onInput2Change
+    onInput2Change, 
+    badge
 }) => {
     if (!isOpen) return null;
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-base-100 p-6 rounded-lg shadow-lg w-11/12 max-w-md">
-                <h2 className="text-xl font-semibold mb-4">{title}</h2>
-                <p className="mb-6">{message}</p>
+                <div className='flex flex-row justify-between'>
+                    <h2 className="text-xl font-semibold mb-4">{title}</h2>
+                    <button onClick={onCancel} className='m-0 p-0 h-0 rounded-full hover:text-primary'><X /></button>
+                </div>
+                <p className="mb-4">{message}</p>
+                {badge && <p className='mb-6 badge badge-primary p-4 text-pretty'>{badge}</p>}
                 {input1 && input2 && (
                     <form>
                         {input1 && (

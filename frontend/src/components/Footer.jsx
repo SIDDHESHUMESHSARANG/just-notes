@@ -7,45 +7,48 @@ const Footer = () => {
 
   return (
     <div>
-      <hr className="border border-base-300" />
-      <footer className="flex md:flex-row flex-col gap-4 justify-between p-4 text-center">
-        <h1
-          className="md:text-2xl text-lg font-bold tracking-tighter
-                 text-[#808080] leading-none"
-        >
+      <hr className="border-base-300" />
+      <footer className="flex md:flex-row flex-col gap-4 justify-between p-4 md:p-6 text-center">
+        <h1 className="md:text-2xl text-lg font-bold tracking-tight text-base-content leading-none">
           Just Notes
         </h1>
-        <p className="md:text-lg text-md text-[#808080]">
-          &copy; {year} SIDDHESHUMESHSARANG
+        <p className="md:text-lg text-md text-base-content/70">
+          &copy; {year} Siddhesh Umesh Sarang
         </p>
 
         <div className="flex gap-10 justify-center">
-          <i className="text-[#808080]">
-            <Link to={"mailto:web.just.notes@gmail.com"} target="_blank">
-              <Mail size={30} />
-            </Link>
-          </i>
-          <i className="text-[#808080]">
-            <Link to={"https://instagram.com/iamsid08"} target="_blank">
-              <Instagram size={30} />
-            </Link>
-          </i>
-          <i className="text-[#808080]">
-            <Link
-              to={"https://github.com/chmcs-siddheshumeshsarang/just-notes"}
-              target="_blank"
-            >
-              <Github size={30} />
-            </Link>
-          </i>
-          <p className="md:text-lg hidden md:flex gap-1 text-[#808080]">
-            powered by {" "}
+          <Link
+            to={"mailto:web.just.notes@gmail.com"}
+            target="_blank"
+            className="text-base-content/70 hover:text-primary transition-colors duration-200"
+            aria-label="Email"
+          >
+            <Mail size={30} />
+          </Link>
+          <Link
+            to={"https://instagram.com/iamsid08"}
+            target="_blank"
+            className="text-base-content/70 hover:text-primary transition-colors duration-200"
+            aria-label="Instagram"
+          >
+            <Instagram size={30} />
+          </Link>
+          <Link
+            to={"https://github.com/chmcs-siddheshumeshsarang/just-notes"}
+            target="_blank"
+            className="text-base-content/70 hover:text-primary transition-colors duration-200"
+            aria-label="GitHub"
+          >
+            <Github size={30} />
+          </Link>
+          <p className="md:text-lg hidden md:flex gap-1 text-base-content/70">
+            powered by{" "}
             <Link
               to={"https://cloudinary.com/"}
-              className="hover:underline hover:text-secondary underline-offset-2"
+              className="hover:text-primary hover:underline underline-offset-2 transition-colors duration-200"
               target="_blank"
             >
-               cloudinary
+              cloudinary
             </Link>
           </p>
         </div>
