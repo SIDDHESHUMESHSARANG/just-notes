@@ -1,9 +1,9 @@
 import express from "express"
 import 'dotenv/config'
-import { connectToDB } from "../db/db.js"
-import Routes from '../routes/notesRoutes.js'
+import { connectToDB } from "./db/db.js"
+import Routes from './routes/notesRoutes.js'
 import CORS from 'cors'
-import { getTimestamp } from "../utils/utils.js"
+import { getTimestamp } from "./utils/utils.js"
 import dns from 'dns';
 dns.setServers(["8.8.8.8", "1.1.1.1"]); 
 

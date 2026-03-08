@@ -1,5 +1,5 @@
+# Just Notes
 
-# Just Notes 
 <p align="left">
 <br/>
 <a href="https://git.io/typing-svg"><img align="center" src="https://readme-typing-svg.herokuapp.com?font=Poppins&duration=500&pause=1000&width=450&size=35&color='fff'&lines=Aspire;+Inspire;+Transpire;+With+Just+Notes.;" alt="Typing SVG" /></a> 
@@ -44,29 +44,43 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application built as a seme
 
 ## Project Structure
 
-```
+```text
 just-notes/
-├── backend/             # Express API server
-│   ├── config/          # configuration helpers (Cloudinary, multer)
-│   ├── controllers/     # request handlers for every route
-│   ├── db/              # MongoDB connection logic
-│   ├── routes/          # Express routers
-│   ├── schemas/         # Mongoose models
-│   ├── src/             # server entrypoint (server.js)
-│   └── utils/           # utility functions used across controllers
+├── backend/                    # Express API server (written in JS)
+│   ├── package.json            # backend dependencies & scripts
+│   ├── .env.example            # sample environment variables
+│   ├── src/                    # source code
+│   │   ├── server.js           # entry point, Express app setup
+│   │   ├── config/             # configuration helpers
+│   │   │   ├── cloudinary.js   # Cloudinary client setup
+│   │   │   └── multer.js       # multer storage middleware
+│   │   ├── controllers/        # request handlers
+│   │   │   └── notesController.js
+│   │   ├── db/                 # MongoDB connection logic
+│   │   │   └── db.js
+│   │   ├── routes/             # Express routers
+│   │   │   └── notesRoutes.js
+│   │   ├── schemas/            # Mongoose models
+│   │   │   └── noteSchema.js
+│   │   └── utils/              # shared utility functions
+│   │       └── utils.js
+│   └── ...                     # other root‑level config files (.gitignore, etc.)
 
-├── frontend/            # React user interface (Vite + TailwindCSS)
-│   ├── public/          # static assets (html, images)
-│   ├── src/
-│   │   ├── assets/      # images / icons
-│   │   ├── components/  # reusable UI components (Navbar, modal, cards)
-│   │   ├── pages/       # view-level components (HomePage, CreatePage, etc.)
-│   │   ├── utils/       # helper functions (axios instance, formatters)
-│   │   ├── App.jsx      # root component and router setup
-│   │   └── main.jsx     # React entrypoint
+├── frontend/                   # React user interface (Vite + TailwindCSS)
 │   ├── package.json
-│   └── config files     # tailwind, postcss, eslint, vite
-└── README.md            # this documentation
+│   ├── public/                 # static assets (html, images)
+│   ├── src/
+│   │   ├── assets/             # images / icons
+│   │   ├── components/         # reusable UI components (Navbar, modal, cards)
+│   │   ├── pages/              # view-level components (HomePage, CreatePage, etc.)
+│   │   ├── utils/              # helper functions (axios instance, formatters)
+│   │   ├── App.jsx             # root component and router setup
+│   │   └── main.jsx            # React entrypoint
+│   ├── eslint.config.js
+│   ├── tailwind.config.js
+│   ├── postcss.config.cjs
+│   └── vite.config.js
+└── README.md                   # this documentation
 ```
 
 ## Features
@@ -154,6 +168,5 @@ This project was created as an academic assignment, but feel free to fork and ex
 &copy; SIDDHESHUMESHSARANG
 
 ---
-
 
 _Last updated: March 2, 2026_
